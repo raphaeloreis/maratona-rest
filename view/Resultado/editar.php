@@ -9,9 +9,9 @@ $id = $obj->id;
 
 
 if(!empty($data)){	
- $resultadoControl = new ResultadoControl();
- $resultadoControl->update($obj , $id);
- header('Location:listar.php');
+    $resultadoControl = new ResultadoControl();
+    $resultadoControl->update($obj , $id);
+    header('Location:listar.php');
 }
 
 

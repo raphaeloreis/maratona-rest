@@ -57,8 +57,12 @@ class Corredor extends Conexao{
 		$consulta->execute();
 	}
 
-	public function find($id = null){
-
+	public function find($id){
+        $sql = "SELECT * FROM corredor WHERE id = :id";
+		$consulta = Conexao::prepare($sql);
+		$consulta->bindValue('id',$id);
+		$consulta->execute();
+        return $consulta->fetchAll();
 	}
 
 	public function findAll(){

@@ -19,8 +19,9 @@ class CorredorControl{
 		return $corredor->delete($obj,$id);
 	}
 
-	function find($id = null){
-
+	function find($id){
+		$corredor = new Corredor();
+		return $corredor->find($id);
 	}
 
 	function findAll(){

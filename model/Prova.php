@@ -46,7 +46,11 @@ class Prova extends Conexao{
 	}
 
 	public function find($id = null){
-
+		$sql = "SELECT * FROM prova WHERE id = :id";
+		$consulta = Conexao::prepare($sql);
+		$consulta->bindValue('id',$id);
+		$consulta->execute();
+        return $consulta->fetchAll();
 	}
 
 	public function findAll(){

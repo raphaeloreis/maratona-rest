@@ -20,7 +20,7 @@ class ProvaControl{
 	}
 
 	function find($id = null){
-
+        
 	}
 
 	function findAll(){
